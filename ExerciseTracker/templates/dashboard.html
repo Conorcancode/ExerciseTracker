@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div id="root"></div>
+<noscript>
+    You need to enable Javascript to run this app.
+</noscript>
+
+<script src="{{ url_for('static', filename='bundle.js') }}"></script>
+{% endblock %}

@@ -4,3 +4,20 @@ body{
         color: blue;
     }
 }
+
+.graph{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(200,200,200);
+}
+
+.highlight-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .highlight{
+        width: 100px;
+        height: auto;
+        background-color: rgb(200,200,200);
+    }
+}

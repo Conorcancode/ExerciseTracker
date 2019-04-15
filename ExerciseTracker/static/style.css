@@ -1,0 +1,22 @@
+body {
+  background-color: white; }
+  body .cool {
+    color: blue; }
+
+.graph {
+  width: 200px;
+  height: 200px;
+  background-color: #c8c8c8; }
+
+.highlight-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  .highlight-grid .highlight {
+    width: 100px;
+    height: auto;
+    background-color: #c8c8c8; }
