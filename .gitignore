@@ -10,3 +10,4 @@ requirements.txt
 config.py
 webpack.config.js
 .babelrc
+gulpfile.js
