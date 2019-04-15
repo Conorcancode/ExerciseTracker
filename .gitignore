@@ -1,8 +1,10 @@
 /.vscode
 /venv
-/configs
+/instance
 /ExerciseTracker/__pycache__
+/__pycache__
 node_modules
 package-lock.json
 package.json
 requirements.txt
+config.py

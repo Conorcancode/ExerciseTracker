@@ -1,23 +1,26 @@
 from flask import Flask
+import os
 
-def create_app(config=None):
+def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
+
     app.config.from_mapping(
-        SECRET_KEY='dev'
+        SECRET_KEY = 'dev'
     )
-    
-    if config is None:
-        #load dev config
-        app.config.from_pyfile('configs/dev_config.py', silent=True)
-    elif config is 'test':
-        #load test config
-        app.config.from_pyfile('configs/test_config.py')
+    if test_config is None:
+        app.config.from_pyfile('../instance/config.cfg')
     else:
-        #load production config
-        app.config.from_pyfile('configs/prod_config.py')
+        app.config.from_pyfile('test_config.py')
+
 
     @app.route('/hello')
     def hello():
         return 'Hello, World!'
+
+    from . import login
+    app.register_blueprint(login.bp)
+
+    from . import dashboard
+    app.register_blueprint(dashboard.bp)
 
     return app
