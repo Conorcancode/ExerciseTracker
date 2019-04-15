@@ -16,7 +16,7 @@ class Highlights extends Component{
         let highlights = []
         let highlight_amount = this.props.highlight_amount
         for(let i = 0; i < highlight_amount; i++){
-            highlights.push( <Highlight name={this.props.highlight_stats[i].workout_name} record={this.props.highlight_stats[i].record} unit={this.props.highlight_stats[i].unit} key={this.props.highlight_stats.workout_name}/>)
+            highlights.push( <Highlight name={this.props.highlight_stats[i].workout_name} record={this.props.highlight_stats[i].record} unit={this.props.highlight_stats[i].unit} key={this.props.highlight_stats[i].workout_name + i}/>)
         }
         return(
             <div className="highlight-grid">

@@ -4,8 +4,8 @@ class ListItem extends Component{
     render(){
         return(
             <li>
-                <input type="checkbox"></input>{this.props.workout_name}
-                <input type="text"></input>{this.props.workout_unit}
+                <input type="checkbox"></input><span>{this.props.workout_name}</span>
+                <input type="text"></input><span>{this.props.workout_unit}</span>
             </li>
         )
     }
