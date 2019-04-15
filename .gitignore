@@ -9,3 +9,4 @@ package.json
 requirements.txt
 config.py
 webpack.config.js
+.babelrc
