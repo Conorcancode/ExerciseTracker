@@ -3,9 +3,9 @@ import React, {Component} from 'react'
 class ListItem extends Component{
     render(){
         return(
-            <li>
-                <input type="checkbox"></input><span>{this.props.workout_name}</span>
-                <input type="text"></input><span>{this.props.workout_unit}</span>
+            <li className='list-item'>
+                <input className="workout-checkbox" type="checkbox"></input><span className="workout-label">{this.props.workout_name}</span>
+                <input className="workout-input" type="text"></input><span className="workout-unit">{this.props.workout_unit}</span>
             </li>
         )
     }
@@ -19,7 +19,7 @@ class CheckList extends Component{
             list_items.push(<ListItem workout_name={workout.workout_name} workout_unit={workout.workout_unit} key={workout.workout_name}/>)
         })
         return(
-            <div>{list_items}</div>
+            <ul className="workout-list">{list_items}</ul>
             
         )
     }

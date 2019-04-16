@@ -1,23 +1,50 @@
-body{
-    background-color: white;
-    .cool{
-        color: blue;
+
+.navigation-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    .nav-button{
+        width: 45%;
+        background-color: white;
+        border: none;
+        font-size: 1.25em;
+        cursor: pointer;
+        padding: 5px 2px;
+    }
+
+    .active{
+        border-bottom: 2px solid lawngreen;
     }
 }
 
+.progress-calendar{
+    min-width: 200px;
+    height: 175px;
+    margin: 0 auto 10px auto;
+    background-color: rgb(240,240,240);
+}
 .graph{
-    width: 200px;
-    height: 200px;
-    background-color: rgb(200,200,200);
+    min-width: 200px;
+    height: 175px;
+    margin: auto;
+    background-color: rgb(240,240,240);
 }
 
 .highlight-grid{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 20px;
     .highlight{
-        width: 100px;
+        min-width: 125px;
         height: auto;
-        background-color: rgb(200,200,200);
+        background-color: rgb(240,240,240);
+        padding: 10px;
+        text-align: center;
+        margin: 5px;
+        border: 2px solid grey;
+        h3{
+            margin: 0;
+        }
     }
 }

@@ -1,12 +1,31 @@
-body {
-  background-color: white; }
-  body .cool {
-    color: blue; }
+.navigation-bar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  .navigation-bar .nav-button {
+    width: 45%;
+    background-color: white;
+    border: none;
+    font-size: 1.25em;
+    cursor: pointer;
+    padding: 5px 2px; }
+  .navigation-bar .active {
+    border-bottom: 2px solid lawngreen; }
+
+.progress-calendar {
+  min-width: 200px;
+  height: 175px;
+  margin: 0 auto 10px auto;
+  background-color: #f0f0f0; }
 
 .graph {
-  width: 200px;
-  height: 200px;
-  background-color: #c8c8c8; }
+  min-width: 200px;
+  height: 175px;
+  margin: auto;
+  background-color: #f0f0f0; }
 
 .highlight-grid {
   display: -webkit-box;
@@ -15,8 +34,15 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -ms-flex-pack: distribute;
-  justify-content: space-around; }
+  justify-content: space-around;
+  margin-top: 20px; }
   .highlight-grid .highlight {
-    width: 100px;
+    min-width: 125px;
     height: auto;
-    background-color: #c8c8c8; }
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    margin: 5px;
+    border: 2px solid grey; }
+    .highlight-grid .highlight h3 {
+      margin: 0; }
