@@ -4,8 +4,13 @@ class ListItem extends Component{
     render(){
         return(
             <li className='list-item'>
-                <input className="workout-checkbox" type="checkbox"></input><span className="workout-label">{this.props.workout_name}</span>
-                <input className="workout-input" type="text"></input><span className="workout-unit">{this.props.workout_unit}</span>
+                <input className="workout-checkbox" type="checkbox"></input>
+                <span className="workout-checkmark"></span>
+                <span className="workout-label">{this.props.workout_name}</span>
+                <div className="workout-input-group">
+                    <input className="workout-input" type="number"></input>
+                    <span className="workout-unit">{this.props.workout_unit}</span>
+                </div>
             </li>
         )
     }

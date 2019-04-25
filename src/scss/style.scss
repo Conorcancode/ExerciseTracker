@@ -1,4 +1,5 @@
 
+
 .navigation-bar{
     width: 100%;
     display: flex;
@@ -25,7 +26,7 @@
 }
 .graph{
     min-width: 200px;
-    height: 175px;
+    height: auto;
     margin: auto;
     background-color: rgb(240,240,240);
 }
@@ -45,6 +46,81 @@
         border: 2px solid grey;
         h3{
             margin: 0;
+        }
+    }
+}
+
+.workout-grid{
+    margin: 0 10px;
+    .workout-list{
+        list-style: none;
+        padding-left: 15px;
+       
+        .list-item{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            user-select: none;
+            margin-bottom: 5px;
+            width: 100%;
+            &:hover .workout-checkbox ~ .workout-checkmark{
+                background-color: #ccc;
+            }
+            input{
+                &:checked ~ .workout-checkmark{
+                    background-color: #2196F3;
+                    &::after{
+                        display: block;
+                    }
+                }
+            }
+            .workout-checkbox{
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 25px;
+                width: 25px;
+                z-index: 3;
+
+            }
+
+            .workout-checkmark{
+                position: absolute;
+                height: 25px;
+                width: 25px;
+                background-color: #eee;
+                z-index: 2;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    display: none;
+                    left: 9px;
+                    top: 5px;
+                    width: 5px;
+                    height: 10px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    transform: rotate(45deg);
+                }
+            }
+            .workout-label{
+                font-size: 1.25em;
+                margin-left: 30px;
+            }
+            .workout-input-group{
+                display: flex;
+                justify-content: space-between;
+                width: 100px;
+                margin-right: 10px;
+                .workout-input{
+                    width: 3em;
+                    margin-left: 15px;
+                }
+    
+                .workout-unit{
+                    margin-left: 5px;
+                }
+            }
         }
     }
 }
